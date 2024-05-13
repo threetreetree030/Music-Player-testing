@@ -10,6 +10,10 @@ body {
       align-items: center;
       flex-direction: column;
       justify-content: center;
+      /* 其他樣式 */
+      background-image: url('path/to/album/cover.jpg'); /* 設置播放器的背景圖片 */
+      backdrop-filter: blur(10px); /* 添加毛玻璃效果，10px是模糊半徑，可以根據需要調整 */
+}
   }
     .wrapper{
       border: 1px solid transparent;
