@@ -15,9 +15,9 @@ body {
     border: 1px solid transparent;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    backdrop-filter: blur(150px); /* 添加毛玻璃效果 */
-    background-color: rgba(0, 0, 0, 0.5); /* 调整背景透明度 */
+    backdrop-filter: blur(10px); /* 添加毛玻璃效果 */
+    background-color: rgba(0, 0, 0, 0.5); /* 添加半透明的黑色背景 */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
     .details {
     display: flex;
