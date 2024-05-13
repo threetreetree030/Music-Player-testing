@@ -116,6 +116,7 @@ body {
     
     .slider_container {
     display: flex;
+    color: white; /* 這行將改變時間進度條中的文字顏色為白色 */
     justify-content: center;
     align-items: center;
     }
