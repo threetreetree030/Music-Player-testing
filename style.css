@@ -3,8 +3,7 @@ body {
     background: linear-gradient(to right,#9a1d86, #1595be);
     font-weight: bold;
     }
-    
-    .player{
+     .player{
       height: 95vh;
       display: flex;
       align-items: center;
