@@ -19,6 +19,8 @@ let track_index = 0;
 let isPlaying = false;
 let isRandom = false;
 let updateTimer;
+let pause_btn_pressed = false; // 在函数之外定义并初始化标志变量
+
 
 const music_list = [
     {
@@ -120,7 +122,7 @@ function playpauseTrack(){
         pause_btn_pressed = false;
     }
     // 根据当前播放状态执行播放或暂停
-    isPlaying ? pauseTrack() : playTrack;
+    isPlaying ? pauseTrack() : playTrack(); // 添加括号调用 playTrack 函数
 }
 function playTrack(){
     curr_track.play();
@@ -148,8 +150,8 @@ function nextTrack(){
     loadTrack(track_index);
 
     // 如果当前没有按下暂停键，则将当前音乐设为单曲循环状态
-    if (!pause_btn_pressed) {
-        curr_track.loop = true;
+    if (!isPlaying) {
+        curr_track.loop = true; // 使用 isPlaying 变量来检查音乐是否正在播放
     }
     playTrack();
 }
