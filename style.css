@@ -69,10 +69,10 @@ body {
     }
     
     .now-playing {
+    font-family: "BoutiqueBitmap7x7", sans-serif; /* 确保使用了正确的字体族名称 */
     font-size: 1rem;
     color: white;
-    font-family: "BoutiqueBitmap7x7.ttf", sans-serif;
-    }
+}
     
     .track-name {
     font-size: 2.5rem;
