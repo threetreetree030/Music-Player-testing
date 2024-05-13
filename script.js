@@ -115,7 +115,12 @@ function repeatTrack(){
     playTrack();
 }
 function playpauseTrack(){
-    isPlaying ? pauseTrack() : playTrack();
+    // 如果音乐正在播放，则将暂停按钮状态设置为 false
+    if (isPlaying) {
+        pause_btn_pressed = false;
+    }
+    // 根据当前播放状态执行播放或暂停
+    isPlaying ? pauseTrack() : playTrack;
 }
 function playTrack(){
     curr_track.play();
@@ -141,6 +146,11 @@ function nextTrack(){
         track_index = 0;
     }
     loadTrack(track_index);
+
+    // 如果当前没有按下暂停键，则将当前音乐设为单曲循环状态
+    if (!pause_btn_pressed) {
+        curr_track.loop = true;
+    }
     playTrack();
 }
 function prevTrack(){
