@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "BoutiqueBitmap7x7";
+    src: url("font/BoutiqueBitmap7x7.ttf");
+}
+
 .now-playing,
 .track-name,
 .track-artist,
@@ -66,7 +71,7 @@ body {
     .now-playing {
     font-size: 1rem;
     color: white;
-    font-family: "Your Chosen Font", sans-serif; /* 將字體更改為你選擇的字體 */
+    font-family: "BoutiqueBitmap7x7.ttf", sans-serif;
     }
     
     .track-name {
