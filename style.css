@@ -1,7 +1,24 @@
-/* 设置所有元素的颜色为白色 */
-* {
+.now-playing,
+.track-name,
+.track-artist,
+.now-playing,
+.track-name,
+.track-artist,
+.buttons,
+.repeat-track,
+.random-track,
+.playpause-track,
+.prev-track,
+.next-track 
+.repeat-track:hover,
+.random-track:hover,
+.playpause-track:hover,
+.prev-track:hover,
+.next-track
+{
     color: white;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to right,#9a1d86, #1595be);
