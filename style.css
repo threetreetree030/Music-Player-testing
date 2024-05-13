@@ -21,6 +21,7 @@
 .prev-track:hover,
 .next-track
 {
+    font-family: "BoutiqueBitmap7x7", sans-serif;
     color: white;
 }
 
