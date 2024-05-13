@@ -114,7 +114,7 @@ function pauseRandom(){
 function repeatTrack(){
     let current_index = track_index;
     loadTrack(current_index);
-    playTrack();
+    playTrack(); // 这里调用 playTrack 函数即可，不需要再设置单曲循环状态
 }
 function playpauseTrack(){
     // 如果音乐正在播放，则将暂停按钮状态设置为 false
@@ -139,8 +139,8 @@ function pauseTrack(){
     isPlaying = false;
     track_art.classList.remove('rotate');
     wave.classList.remove('loader');
-    playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>'; // 恢复显示播放图标
-    pause_btn_pressed = true; // 设置 pause_btn_pressed 为 true
+    playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+    pause_btn_pressed = true; // 添加此行将 pause_btn_pressed 设置为 true
 }
 function nextTrack(){
     if(track_index < music_list.length - 1 && isRandom === false){
