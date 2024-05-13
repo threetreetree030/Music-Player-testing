@@ -66,6 +66,7 @@ body {
     .now-playing {
     font-size: 1rem;
     color: white;
+    font-family: "Your Chosen Font", sans-serif; /* 將字體更改為你選擇的字體 */
     }
     
     .track-name {
