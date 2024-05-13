@@ -136,7 +136,8 @@ function pauseTrack(){
     isPlaying = false;
     track_art.classList.remove('rotate');
     wave.classList.remove('loader');
-    playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+    playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>'; // 恢复显示播放图标
+    pause_btn_pressed = true; // 设置 pause_btn_pressed 为 true
 }
 function nextTrack(){
     if(track_index < music_list.length - 1 && isRandom === false){
