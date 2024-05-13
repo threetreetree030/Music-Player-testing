@@ -11,7 +11,7 @@ body {
       flex-direction: column;
       justify-content: center;
   }
-.wrapper {
+    .wrapper {
     border: 1px solid transparent;
     padding: 30px;
     border-radius: 20px;
@@ -19,13 +19,24 @@ body {
     backdrop-filter: blur(150px); /* 添加毛玻璃效果 */
     background-color: rgba(0, 0, 0, 0.5); /* 调整背景透明度 */
 }
+    .glass {
+    position: absolute;
+    top: -40px;
+    left: 70px;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid #999;
+    backdrop-filter: blur(6px);
+}
     .details {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     }
-    
+
     .track-art {
     margin: 25px;
     height: 250px;
