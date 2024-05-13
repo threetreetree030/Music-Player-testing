@@ -17,7 +17,7 @@ body {
     border-radius: 20px;
     box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     backdrop-filter: blur(150px); /* 添加毛玻璃效果 */
-    background-color: rgba(0, 0, 0, 0.8); /* 调整背景透明度 */
+    background-color: rgba(0, 0, 0, 0.7); /* 调整背景透明度 */
 }
     .details {
     display: flex;
