@@ -50,7 +50,7 @@ const music_list = [
     {
         img : 'images/testing.png',
         name : 'testing',
-        artist : 'Clean Bandit',
+        artist : '某時間線的薩菲羅斯',
         music : 'music/testing.mp3'
     },
 
