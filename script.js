@@ -49,7 +49,7 @@ const music_list = [
         img : 'images/testing.png',
         name : 'testing',
         artist : 'Clean Bandit',
-        music : 'music/tseting.mp3'
+        music : 'music/testing.mp3'
     },
 
 ];
