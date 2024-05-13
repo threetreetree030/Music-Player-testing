@@ -130,6 +130,9 @@ function playTrack(){
     track_art.classList.add('rotate');
     wave.classList.add('loader');
     playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+    
+    // 设置音乐为单曲循环状态
+    curr_track.loop = true;
 }
 function pauseTrack(){
     curr_track.pause();
