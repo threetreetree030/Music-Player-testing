@@ -150,8 +150,8 @@ function nextTrack(){
     loadTrack(track_index);
 
     // 如果当前没有按下暂停键，则将当前音乐设为单曲循环状态
-    if (!isPlaying) {
-        curr_track.loop = true; // 使用 isPlaying 变量来检查音乐是否正在播放
+    if (!pause_btn_pressed) {
+        curr_track.loop = true; // 使用 pause_btn_pressed 变量来检查音乐是否正在播放
     }
     playTrack();
 }
