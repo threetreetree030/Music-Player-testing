@@ -46,11 +46,11 @@ const music_list = [
         music : 'music/Rather Be.mp3'
     },
     {
-    img : 'images/testing.png',
-    name : 'testing',
-    artist : 'New Artist',
-    music : 'music/testing.mp3'
-}
+        img : 'images/testing.png',
+        name : 'testing',
+        artist : 'Clean Bandit',
+        music : 'music/tseting.mp3'
+    },
 
 ];
 
