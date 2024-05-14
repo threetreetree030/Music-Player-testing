@@ -39,7 +39,7 @@ body {
   }
     .wrapper {
     border: 1px solid transparent;
-    padding: 30px;
+    padding: 15px;
     border-radius: 20px;
     backdrop-filter: blur(10px); /* 添加毛玻璃效果 */
     background-color: rgba(0, 0, 0, 0.5); /* 添加半透明的黑色背景 */
