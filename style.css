@@ -20,6 +20,10 @@ src: url('L011c2ljLVBsYXllci10ZXN0aW5nL2ZvbnQvQm91dGlxdWVCaXRtYXA3eDcudHRm');
 {
     color: white;
 }
+.random-track,
+.repeat-track {
+    display: none;
+}
 
 body {
     font-family: "BoutiqueBitmap7x7", sans-serif;
