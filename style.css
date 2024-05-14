@@ -39,7 +39,12 @@ body {
   }
     .wrapper {
     border: 1px solid transparent;
-    padding: 15px;
+    padding: 15px;}
+
+    /* 可以進一步調整按鈕的對齊方式和間距 */
+    /* 如果需要，調整這些值以滿足你的需求 */
+    .buttons > * {
+    margin: 0 10px; /* 調整按鈕之間的間距 */
     border-radius: 20px;
     backdrop-filter: blur(10px); /* 添加毛玻璃效果 */
     background-color: rgba(0, 0, 0, 0.5); /* 添加半透明的黑色背景 */
