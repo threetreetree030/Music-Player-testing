@@ -139,7 +139,7 @@ body {
     width: 15px; /* 調整成正方形的尺寸 */
     height: 15px; /* 調整成正方形的尺寸 */
     background: white; /* 白色 */
-    border: 1px solid white; /* 可選：添加邊框 */
+    border: none; /* 可選：添加邊框 */
     cursor: grab;
     border-radius: 0%; /* 去除圓角 */
 }
