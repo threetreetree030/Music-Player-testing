@@ -141,7 +141,7 @@ body {
     background: white;
     border: 3px solid #ffffff;
     cursor: grab;
-    border-radius: 100%;
+    border-radius: 0%;
     }
     
     .seek_slider:hover,
