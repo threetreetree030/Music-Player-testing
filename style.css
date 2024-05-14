@@ -87,7 +87,7 @@ body {
     
     .buttons {
     display: flex;
-    flex-direction: row;
+    flex-direction: center;
     align-items: center;
     margin-bottom: 30px;
     color: white;
@@ -101,7 +101,7 @@ body {
     .playpause-track,
     .prev-track,
     .next-track {
-    padding: 25px;
+    padding: 50px;
     opacity: 0.8;
     transition: opacity .2s;
     }
