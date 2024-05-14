@@ -141,8 +141,9 @@ body {
     background: white; /* 白色 */
     border: 1px solid black; /* 可選：添加邊框 */
     cursor: grab;
-    border-radius: 0; /* 去除圓角 */
-    }
+    border-radius: 0%; /* 去除圓角 */
+}
+
     
     .seek_slider:hover,
     .volume_slider:hover {
