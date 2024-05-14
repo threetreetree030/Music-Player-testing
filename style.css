@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "BoutiqueBitmap7x7.ttf";
-    src: url("Music-Player-testing/font/BoutiqueBitmap7x7.ttf") ;
+    font-family: "BoutiqueBitmap7x7"; /* 这里是字体的名称，而不是文件名 */
+    src: url("Music-Player-testing/font/BoutiqueBitmap7x7.ttf");
 }
 
 .now-playing
