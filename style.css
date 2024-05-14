@@ -116,7 +116,7 @@ body {
     -moz-appearance: none;
     appearance: none;
     height: 5px;
-    background: #FFFFFF;
+    background: white;
     -webkit-transition: .2s;
     transition: opacity .2s;
     }
