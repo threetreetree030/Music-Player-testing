@@ -198,10 +198,7 @@ body {
         }
     }
     .loader {
-      height: 70px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: none;
     }
     .loader .stroke{
         background: #f1f1f1;
