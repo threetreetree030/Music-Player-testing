@@ -67,10 +67,9 @@ body {
     .now-playing {
     font-size: 1rem;
     color: white;
-    margin-bottom: 8px; /* 調整 playing music 與上方元素的間距 */
+    margin-bottom: 5px; /* 調整 playing music 與上方元素的間距 */
     font-family: "BoutiqueBitmap7x7.ttf", sans-serif;
-    content: "某時間線的薩菲羅斯 x of y"; /* 設置顯示文字 */
-}
+    }
     .track-name {
     font-size: 2.5rem;
     color: white;
