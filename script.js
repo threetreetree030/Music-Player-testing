@@ -128,7 +128,7 @@ function playTrack(){
     curr_track.play();
     isPlaying = true;
     track_art.classList.add('rotate');
-    wave.classList.add('loader');
+    wave.classList.remove('loader');
     playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
     
     // 设置音乐为单曲循环状态
