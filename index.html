@@ -6,27 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Music-Player-testing/font/BoutiqueBitmap7x7.ttf">
-    <link rel="stylesheet" href="Music-Player-testing/font/BoutiqueBitmap7x7_1.5.ttf">
-    <link rel="stylesheet" href="Music-Player-testing/font/BoutiqueBitmap7x7_1.6.ttf">
-    <link rel="stylesheet" href="Music-Player-testing/font/BoutiqueBitmap7x7_1.7.ttf">
-    <link rel="stylesheet" href="Music-Player-testing/font/PressStart2P-Regular.ttf">
+    <link rel="stylesheet" href="font/BoutiqueBitmap7x7.ttf">
+    <link rel="stylesheet" href="font/BoutiqueBitmap7x7_1.5.ttf">
+    <link rel="stylesheet" href="font/BoutiqueBitmap7x7_1.6.ttf">
+    <link rel="stylesheet" href="font/BoutiqueBitmap7x7_1.7.ttf">
+    <link rel="stylesheet" href="font/PressStart2P-Regular.ttf">
     <script src="script.js" defer></script>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
    <div class="player">
        <div class="wrapper">
            <div class="details">
+               <div class="now-playing">某時間線的薩菲羅斯 x OF y</div>
                <div class="track-art"></div>
                <div class="track-name">歌曲名稱</div>
                <div class="track-artist">歌手名稱</div>
            </div>
-           }
+
            <div class="slider_container">
                <div class="current-time">00:00</div>
                 <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
@@ -40,6 +39,9 @@
            </div>
 
            <div class="buttons">
+               <div class="random-track" onclick="randomTrack()">
+                   <i class="fas fa-random fa-2x" title="random"></i>
+               </div>
                <div class="prev-track" onclick="prevTrack()">
                     <i class="fa fa-step-backward fa-2x"></i>
                 </div>
@@ -48,6 +50,9 @@
                 </div>
                 <div class="next-track" onclick="nextTrack()">
                     <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+                <div class="repeat-track" onclick="repeatTrack()">
+                    <i class="fa fa-repeat fa-2x" title="repeat"></i>
                 </div>
            </div>
 
@@ -64,3 +69,241 @@
    </div>
 </body>
 </html>
+
+這裡是css的代碼：
+@font-face {
+    font-family: "BoutiqueBitmap7x7";
+    src: url("font/BoutiqueBitmap7x7.ttf");
+}
+
+.now-playing,
+.track-name,
+.track-artist,
+.now-playing,
+.track-name,
+.track-artist,
+.buttons,
+.repeat-track,
+.random-track,
+.playpause-track,
+.prev-track,
+.next-track 
+.repeat-track:hover,
+.random-track:hover,
+.playpause-track:hover,
+.prev-track:hover,
+.next-track
+{
+    color: white;
+}
+
+body {
+    font-family: "BoutiqueBitmap7x7", sans-serif;
+    background: linear-gradient(to right,#9a1d86, #1595be);
+    font-weight: bold;
+}
+
+    .player{
+      height: 95vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+  }
+    .wrapper {
+    border: 1px solid transparent;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /* 添加毛玻璃效果 */
+    background-color: rgba(0, 0, 0, 0.5); /* 添加半透明的黑色背景 */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+    .details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+    .track-art {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    border:2px solid 	#FFFAFA;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    -moz-box-shadow: 0px 6px 5px black;
+    -webkit-box-shadow: 0px 6px 5px black;
+    box-shadow: 0px 6px 5px black;
+    -moz-border-radius:190px;
+    -webkit-border-radius:190px;
+    border-radius:190px;
+    }
+    
+    .now-playing {
+    font-size: 1rem;
+    color: white;
+    font-family: "BoutiqueBitmap7x7.ttf", sans-serif;
+    }
+    
+    .track-name {
+    font-size: 2.5rem;
+    color: white;
+    }
+    
+    .track-artist {
+    margin-top: 5px;
+    font-size: 1.5rem;
+    color: white;
+    }
+    
+    .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    color: white;
+    }
+    .active{
+        color: black;
+    }
+    
+    .repeat-track,
+    .random-track,
+    .playpause-track,
+    .prev-track,
+    .next-track {
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity .2s;
+    }
+    
+    .repeat-track:hover,
+    .random-track:hover,
+    .playpause-track:hover,
+    .prev-track:hover,
+    .next-track:hover {
+    opacity: 1.0;
+    }
+    
+    .slider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #83A9FF;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    }
+    
+    .seek_slider::-webkit-slider-thumb,
+    .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid #3774FF;
+    cursor: grab;
+    border-radius: 100%;
+    }
+    
+    .seek_slider:hover,
+    .volume_slider:hover {
+    opacity: 1.0;
+    }
+    
+    .seek_slider {
+    width: 60%;
+    }
+    
+    .volume_slider {
+    width: 30%;
+    }
+    
+    .current-time,
+    .total-duration {
+    padding: 10px;
+    }
+    
+    i.fa-volume-down,
+    i.fa-volume-up {
+    padding: 10px;
+    }
+    
+    i,
+    i.fa-play-circle,
+    i.fa-pause-circle,
+    i.fa-step-forward,
+    i.fa-step-backward,
+    p {
+    cursor: pointer;
+    }
+    .randomActive{
+        color: black;
+    }
+    .rotate {
+        animation: rotation 8s infinite linear;
+    }
+    @keyframes rotation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(359deg);
+        }
+    }
+    .loader {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loader .stroke{
+        background: #f1f1f1;
+        height: 150%;
+        width: 10px;
+        border-radius: 50px;
+        margin: 0 5px;
+        animation: animate 1.4s linear infinite;
+    }
+      @keyframes animate {
+        50% {
+          height: 20%;
+          background: #4286f4;
+        }
+    
+        100% {
+          background: #4286f4;
+          height: 100%;
+        }
+      }
+      .stroke:nth-child(1){
+          animation-delay: 0s;
+      }
+      .stroke:nth-child(2){
+        animation-delay: 0.3s;
+    }
+    .stroke:nth-child(3){
+        animation-delay: 0.6s;
+    }
+    .stroke:nth-child(4){
+        animation-delay: 0.9s;
+    }
+    .stroke:nth-child(5){
+        animation-delay: 0.6s;
+    }
+    .stroke:nth-child(6){
+        animation-delay: 0.3s;
+    }
+    .stroke:nth-child(7){
+        animation-delay: 0s;
+    }
