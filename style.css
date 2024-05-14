@@ -189,3 +189,10 @@ body {
           transform: rotate(359deg);
         }
     }
+    @media screen and (max-width: 600px) {
+    /* 在螢幕寬度小於 600px 時應用的樣式 */
+    .player {
+        /* 調整播放器的大小或排列方式 */
+    }
+}
+
